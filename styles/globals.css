@@ -1,3 +1,220 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playball', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --main-color: #026670;
+  --primary-color: #edeae5;
+  --secondery-color: #CBEDD5;
+  --gold-color : gold;
+}
+
+body {
+  background-color: white;
+}
+
+.navbar {
+  box-shadow: 1px 0px 15px 2px var(--main-color);
+  -webkit-box-shadow: 1px 0px 15px 2px var(--main-color);
+  -moz-box-shadow: 1px 0px 15px 2px var(--main-color);
+}
+
+.noscroll {
+  position: fixed !important;
+  overflow: hidden;
+  left: 0;
+}
+
+.login,
+.sidebar {
+  height: calc(100vh - 96px);
+}
+
+.sidebar {
+  box-shadow: -2px -1px 12px 2px rgba(105, 105, 105, 0.48);
+  -webkit-box-shadow: -2px -1px 12px 2px rgba(105, 105, 105, 0.48);
+  -moz-box-shadow: -2px -1px 12px 2px rgba(105, 105, 105, 0.48);
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondery-color);
+}
+.bg-gold {
+  background-color: var(--gold-color);
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondery-color);
+}
+.text-gold {
+  color: var(--gold-color);
+}
+
+/* ------------------------------- home ------------------------------ */
+.land {
+  overflow: hidden;
+  min-height: calc(100vh - 96px);
+  background-color: var(--primary-color);
+}
+
+.img-container {
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  border: 60px solid;
+  border-color: var(--main-color) var(--main-color) transparent ;
+  position: relative;
+}
+.logo-land{
+  position: absolute;
+  z-index: 50;
+  width: 170px;
+  background-color: #026670;
+  border-radius: 50%;
+  left: -50px;
+  top: -50px;
+}
+.cicle-land {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  transform: skew(-45deg) ;
+  border-radius: 50%;
+  border: 6px solid gold;
+}
+.img-con , .img-contain{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 25px solid white ;
+}
+.img-con{
+  border: 55px solid gold;
+  background-color: rgb(255, 229, 84);
+  position: relative;
+}
+
+.land-image{
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 620px;
+  border-radius: 0%  0% 40% 40%;
+}
+@media screen and (max-width:750px) {
+  .img-container{
+    width: 450px;
+    height: 450px;
+    border-width: 30px;
+  }
+  .logo-land{
+    width: 100px;
+    top: -20px;
+    left: -10px;
+  }
+  .cicle-land{
+    width: 350px;
+    height: 350px;
+  }
+  .img-contain{
+    border-width: 15px;
+  }
+  .img-con{
+    border-width: 20px;
+  }
+  .land-image{
+    height: 500px;
+  }
+}
+/* -------------------------------------- head of section ----------------------------------- */
+.section-head .title{
+  border-bottom: 3px solid var(--gold-color);
+  padding-bottom: 12px;
+  text-align: center;
+  position: relative;
+}
+.title > span{
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--gold-color);
+  border-radius: 50%;
+  bottom: -7px;
+}
+.section-head .title .left{
+  left: 0;
+}
+.section-head .title .right{
+  right: 0;
+}
+/* -------------------------------------- end head of section ----------------------------------- */
+/* -------------------------------------- Card ----------------------------------- */
+.card{
+  border-radius: 20px ;
+  position: relative;
+}
+.contant-image{
+  border: 5px solid var(--main-color);
+  border-radius: 50%;
+}
+.back-image{
+  width: 100%;
+  height: 43%;
+  position: absolute;
+  top:0;
+  border-radius: 20px 20px 0 0;
+  background-color: var(--main-color);
+}
+.card-image{
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 4px solid white;
+  position: relative;
+  z-index: 50;
+}
+/* -------------------------------------- End Card ----------------------------------- */
+/* -------------------------------------- Top Order ----------------------------------- */
+.swiper-con{
+  position: relative;
+}
+.swiper-button-next,
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+  color: var(--main-color) !important;
+}
+
+.category-image{
+  width: 280px !important;
+}
+
+@media (min-width:768px) {
+  .category-image{
+    width: 100% !important;
+  }
+}
