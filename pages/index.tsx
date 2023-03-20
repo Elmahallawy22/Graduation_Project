@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Land from '../Components/Land';
 import Toporder from '../Components/Toporder';
 import Views from '../Components/Views';
-import Categories from '../Components/Categories';
 import Footer from '../Components/Footer';
 
 const Home: NextPage = () => {
@@ -18,9 +17,8 @@ const Home: NextPage = () => {
           rel="stylesheet"></link>
       </Head>
       <Land/>
-      <Categories/>
-      <Views/>
       <Toporder/>
+      <Views/>
       <Footer />
     </div>
   )

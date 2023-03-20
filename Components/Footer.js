@@ -5,8 +5,8 @@ function Footer() {
   return (
     <div className="footer flex justify-center py-5 bg-main xl:py-8">
       <div className="container flex flex-col items-center text-2xl font-medium text-center text-white space-y-5">
-        <img src="logoWhite.png" width='300px' />
-        <p>Our job is to make you comfortable and save your life</p>
+        <img src="logoWhite.png" className='w-40 md:w-44 lg:w-56' />
+        <p className='text-lg lg:text-2xl'>Our job is to make you comfortable and save your life</p>
         <div className="flex space-x-1 sm:space-x-3 md:space-x-4">
           <a className='text-blue-600 text-2xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
           href='https://www.facebook.com/youssef.elmahallawy.9/' target='_blank' ><BsFacebook/></a>

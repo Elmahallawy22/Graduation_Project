@@ -1,17 +1,22 @@
 import Link from "next/link";
 import { useState, useEffect, useContext } from "react";
-import {HiOutlineMenu } from 'react-icons/hi';
+import { HiOutlineMenu } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { StateContext } from "./Layout";
+import { BiLogIn } from "react-icons/bi";
+import { FiLogIn } from "react-icons/fi";
+
 
 export function Navbar() {
   const [active, setActive] = useState('home');
   const [activeLogin, setActiveLogin] = useState('signUp');
-  const {activeSidebar, setActiveSidebar} = useContext(StateContext);
+  const { activeSidebar, setActiveSidebar } = useContext(StateContext);
   useEffect(() => {
     if (window.location.pathname === '/') {
       setActive('home')
-
+    }
+    else if (window.location.pathname === '/services') {
+      setActive('services')
     }
     else if (window.location.pathname === '/login') {
       setActiveLogin('login');
@@ -24,18 +29,18 @@ export function Navbar() {
   }, [])
 
   return (
-    <div className="navbar bg-main flex justify-between lg:justify-around items-center py-2 text-white h-24 sticky top-0" style={{zIndex:'500'}}>
-      <img src='logoWhite.png' width='210px'className="ml-5" />
+    <div className="navbar bg-main flex justify-between lg:justify-around items-center py-2 text-white h-24 sticky top-0" style={{ zIndex: '500' }}>
+      <img src='logoWhite.png'  className="ml-5 w-44 md:w-56" />
       <div className="hidden lg:block">
-        <Link href='/' className={`text-2xl font-medium py-2 px-4 ${active === 'home' ? 'bg-white text-main font-semibold' : 'text-white'}`}
+        <a href='/' className={`text-2xl font-medium py-2 px-4 ${active === 'home' ? 'bg-white text-main font-semibold' : 'text-white'}`}
           onClick={() => { setActive('home'); setActiveLogin('signUp') }}
-        >Home</Link>
-        <Link href='#services' className={`text-2xl font-medium py-2 px-4 ${active === 'services' ? 'bg-white text-main font-semibold' : 'text-white'}`}
+        >Home</a>
+        <a href='/services' className={`text-2xl font-medium py-2 px-4 ${active === 'services' ? 'bg-white text-main font-semibold' : 'text-white'}`}
           onClick={() => { setActive('services'); setActiveLogin('signUp') }}
-        >Services</Link>
-        <Link href='/' className={`text-2xl font-medium py-2 px-4 ${active === 'about' ? 'bg-white text-main font-semibold' : 'text-white'}`}
+        >Services</a>
+        <a href='/' className={`text-2xl font-medium py-2 px-4 ${active === 'about' ? 'bg-white text-main font-semibold' : 'text-white'}`}
           onClick={() => { setActive('about'); setActiveLogin('signUp') }}
-        >About</Link>
+        >About</a>
       </div>
       <div className="hidden lg:block">
         <Link href='/login' className={`text-2xl font-medium py-2 px-4 mr-2 ${activeLogin === 'login' ? 'bg-white text-main font-semibold ' : 'text-white'}`}
@@ -51,14 +56,14 @@ export function Navbar() {
           }}
         >Sign Up</Link>
       </div>
-      <div className="mr-6 lg:hidden">
-        {activeSidebar ? 
-        <AiOutlineClose className="text-4xl" onClick={()=>{setActiveSidebar(false)}}/>
-        :
-        <HiOutlineMenu className="text-4xl" onClick={()=>{setActiveSidebar(true)}}/>
-        } 
+      <div className="mr-6 lg:hidden ">
+        <Link href='/signup' className={`text-lg font-medium py-2 px-2 sm:text-xl sm:py-2 sm:px-4 ${activeLogin === 'signUp' ? 'bg-white text-main font-semibold' : 'text-white'}`}
+          onClick={() => {
+            setActiveLogin('signUp')
+            setActive('')
+          }}
+        >Sign Up</Link>
       </div>
     </div>
-
   )
 }
