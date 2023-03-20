@@ -1,7 +1,7 @@
 import {BsArrowRight} from 'react-icons/bs' ;
 function Land() {
   return (
-    <div className='land flex justify-center pt-48'>
+    <div className='land flex justify-center pt-28 lg:pt-48'>
       <div className="container h-full flex flex-col-reverse lg:flex-row justify-between items-center  ">
       
         <div className="text-main self-start flex flex-col items-center lg:items-start pt-5 lg:pt-0 xl:pt-16 lg:flex-1">

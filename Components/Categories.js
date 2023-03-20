@@ -1,11 +1,8 @@
-import Headofsection from "./Headofsection";
-
 function Categories() {
   return (
-    <div className="flex justify-center pt-8 pb-16 " id='services'>
+    <div className="flex justify-center pt-5 pb-8 " id='services'>
       <div className="container">
-        <Headofsection title='The Specalists' />
-        <div className="flex flex-wrap justify-center gap-2 md:gap-5 mt-10 lg:mt-16 font-bold text-white text-center text-2xl lg:text-3xl ">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-5 mt-1 lg:mt-8 font-bold text-white text-center text-2xl lg:text-3xl ">
           <a href='/' className="category overflow-hidden flex flex-col rounded-lg bg-main sm:w-5/12 xl:w-1/4">
             <p className="py-2 lg:py-3">Pediatic Nursing</p>
             <img src='child.jpg' className="category-image flex-1" />
