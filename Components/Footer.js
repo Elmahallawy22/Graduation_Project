@@ -10,11 +10,11 @@ function Footer() {
         <div className="flex space-x-1 sm:space-x-3 md:space-x-4">
           <a className='text-blue-600 text-2xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
           href='https://www.facebook.com/youssef.elmahallawy.9/' target='_blank' ><BsFacebook/></a>
-          <a className='text-blue-800 text-xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
+          <a className='text-blue-800 text-2xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
           href='https://www.linkedin.com/in/youssef-elmahallawy-9115b71a6' target='_blank' ><BsLinkedin/></a>
           <a className='text-green-500 text-2xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
           href='https://wa.me/+201067271096' target='_blank' ><RiWhatsappFill/></a>
-          <a className='text-red-700 text-3xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
+          <a className='text-red-700 text-2xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
           href='mailto:elmahallawyyoussef@gmail.com' target='_blank' ><CgMail/></a>
           <a className='text-gray-800 text-2xl w-10 h-10 rounded-full bg-white flex justify-center items-center'
           href='https://github.com/Elmahallawy22' target='_blank' ><BsGithub/></a>
