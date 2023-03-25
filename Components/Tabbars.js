@@ -9,7 +9,7 @@ export function Tabbars() {
   const { activePages, setActivePages } = useContext(StateContext);
   return (
     //sidebar class styled in globals
-    <div className="lg:hidden flex justify-evenly pt-2 items-center text-xl md:text-2xl text-white sticky bottom-0 bg-main h-16 font-bold" style={{ zIndex: '500' }}>
+    <div className="w-full lg:hidden flex justify-evenly pt-2 items-center text-xl md:text-2xl text-white fixed bottom-0 bg-main h-16 font-bold" style={{ zIndex: '500' }}>
       <Link href='/' className={`flex flex-col items-center ${activePages == 'home' ? 'text-black' : ''}`}
         onClick={() => { setActivePages('home') }}
       ><HiHome /><span className="text-sm md:text-lg">Home</span></Link>

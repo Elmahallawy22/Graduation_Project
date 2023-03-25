@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import Head from 'next/head';
 import Land from '../Components/Land';
 import Toporder from '../Components/Toporder';
 import Views from '../Components/Views';

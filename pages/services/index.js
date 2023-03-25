@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Categories from '../Components/Categories';
+import Categories from '../../Components/Categories';
 
 function Services() {
   return (
