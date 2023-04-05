@@ -9,7 +9,7 @@ export function Layout(props) {
   setTimeout(() => {
     document.querySelector('.welcome').style.display="none"    
     document.querySelector('.website').style.display="block"    
-  }, 2000);
+  }, 1000);
   const [activePages, setActivePages] = useState('home');  
   const [activeLogin, setActiveLogin] = useState('signUp');
   
@@ -20,7 +20,7 @@ export function Layout(props) {
     </div>
     <div className="website" style={{display:'none'}}>
       <StateContext.Provider value={{ activePages, setActivePages , activeLogin , setActiveLogin}}>
-        <Navbar />
+        <Navbar/>
         {props.children}
         <Tabbars/>
       </StateContext.Provider>

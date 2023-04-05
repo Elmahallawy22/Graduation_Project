@@ -14,15 +14,15 @@ function Toporder() {
     progressCircle.current.style.setProperty('--progress', 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
-  const users = [
-    { id: 1, image: 'avatar.jpg', name: 'Youssef Elmahallawy', price: 65, rate: 4, location: 9500 },
-    { id: 2, image: 'avatar2.jpg', name: 'Alaa Mohamed', price: 75, rate: 4.5, location: 3600 },
-    { id: 3, image: 'avatar3.png', name: 'Eslam Elmahallawy', price: 15, rate: 4.9, location: 5600 },
-    { id: 4, image: 'avatar4.jpg', name: 'Ahmed Elmahallawy', price: 25, rate: 5, location: 2540 },
-    { id: 5, image: 'avatar.jpg', name: 'Youssef Elmahallawy', price: 96, rate: 4.7, location: 245 },
-    { id: 6, image: 'avatar2.jpg', name: 'Alaa Mohamed', price: 45, rate: 4.5, location: 4566 },
-    { id: 7, image: 'avatar4.jpg', name: 'Ahmed Elmahallawy', price: 29, rate: 4.9, location: 2000 },
-  ]
+    const users = [
+      { id: 1, image: 'avatar.jpg', name: 'Youssef Elmahallawy', price: 65, rate: 4, location: 9500 , color: '#8BE78B'},
+      { id: 2, image: 'avatar2.jpg', name: 'Alaa Mohamed', price: 75, rate: 4.5, location: 3600 , color: '#FEC90F'},
+      { id: 3, image: 'avatar3.png', name: 'Eslam Elmahallawy', price: 15, rate: 4.9, location: 5600 , color: '#2196f3'},
+      { id: 4, image: 'avatar4.jpg', name: 'Ahmed Elmahallawy', price: 25, rate: 5, location: 2540 , color: '#8BE78B'},
+      { id: 5, image: 'avatar.jpg', name: 'Youssef Elmahallawy', price: 96, rate: 4.7, location: 245 , color: '#FEC90F'},
+      { id: 6, image: 'avatar2.jpg', name: 'Alaa Mohamed', price: 45, rate: 4.5, location: 4566 , color: 'red'},
+      { id: 7, image: 'avatar4.jpg', name: 'Ahmed Elmahallawy', price: 29, rate: 4.9, location: 2000 , color: '#8BE78B'},
+    ]
 
   return (
     <div className="top-order flex justify-center pt-6 lg:pt-16 pb-12 lg:pb-36 " id='services'>
@@ -61,7 +61,7 @@ function Toporder() {
             {users.map((item) => {
               return (
                 <SwiperSlide key={item.id}><Card image={item.image} name={item.name} price={item.price}
-                  rate={item.rate} location={item.location} /></SwiperSlide>
+                  rate={item.rate} location={item.location} clr={item.color}/></SwiperSlide>
               )
             })}
             <div className="autoplay-progress w-0 " slot="container-end">

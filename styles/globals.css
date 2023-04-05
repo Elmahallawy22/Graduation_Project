@@ -171,6 +171,13 @@ body {
   border-radius: 20px ;
   position: relative;
 }
+
+.is-active{
+  width: 13px ;
+  height: 13px;
+  border-radius: 50%;
+}
+
 .contant-image{
   border: 5px solid var(--main-color);
   border-radius: 50%;

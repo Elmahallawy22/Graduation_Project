@@ -69,7 +69,7 @@ function Userdetails() {
         <div className='mr-10'>
           <StyledDropzone />
         </div>
-        <div className='flex flex-col text-white text-2xl font-semibold flex-1 border-2 pt-5 bg-main' >
+        <div className='flex flex-col text-white text-2xl font-semibold flex-1 border-2 pt-5 bg-main rounded-lg' >
           <div className='taken-name flex justify-betwee space-x-48 items-center px-9'>
           <div className='flex flex-col '>
               <label htmlFor='fi-name' className='mb-2' >First Name:</label>
