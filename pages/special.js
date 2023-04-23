@@ -2,8 +2,19 @@ import Head from 'next/head';
 import Headofsection from '../Components/Headofsection';
 import { usersData } from '../data/data';
 import Cards from '../Components/cards';
+import { useEffect } from 'react';
+import { useState } from 'react';
+// import { log } from 'console';
 
 function Special() {
+  const [userData , setUserData] = useState({})
+  useEffect(()=>{
+
+    fetch('https://fakestoreapi.com/products')
+    .then(res=>res.json())
+    .then(json=>setUserData(json))
+    console.log(userData);
+  },[])
   return (
     <>
       <Head>
@@ -17,8 +28,9 @@ function Special() {
       <Headofsection title='Special Nursing' />
       <div className='flex justify-center mt-10'>
         <div className='container p-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-5'>
-          <Cards users={usersData.slice(0, 10)} />
+          <Cards users={usersData} />
         </div>
+        
 
       </div>
     </>
