@@ -2,10 +2,7 @@ import { useEffect } from "react";
 
 function Posts(props){
     useEffect(()=>{
-        // fetch('http://127.0.0.1:8000/api/auth/register')
-        //     .then(res=>res.json())
-        //     .then(json=>console.log(json))
-            console.log(props.posts);
+        
     },[])
     return(
         <>
@@ -24,7 +21,7 @@ export async function getStaticProps(){
     const data = await res.json();
     return {
         props : {
-            posts: data 
+            posts: data
         }
     }
   }

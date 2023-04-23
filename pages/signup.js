@@ -1,45 +1,27 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { useState } from "react";
-import axios from 'axios';
+import {AiFillEye , AiFillEyeInvisible} from 'react-icons/ai';
+
+const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 export default function Login() {
-  const [chooseUser, setChooseUser] = useState(false)
+  const [chooseUser, setChooseUser] = useState(true)
   const [typeUser, setTypeUser] = useState()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [conPassword, setConPassword] = useState('')
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+  const [isConPasswordVisible, setIsConPasswordVisible] = useState(false)
+  const [isnameFocus, setIsnameFocus] = useState(false);
+  const [validName, setValidName] = useState(false);
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    console.log(email);
-    console.log(password);
-    console.log(name);
-    try {
-      const response = await axios.post("https://care-for-you-v1.000webhostapp.com/api/auth/register",
-        {
-          email: email,
-          password: password,
-          name: name
-        },
-        {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true
-        }
-      );
-      console.log(response?.data);
-      console.log(response?.accessToken);
-      console.log(JSON.stringify(response))
-    } catch (err) {
-      if (!err?.response) {
-        console.log('No Server Response');
-      } else if (err.response?.status === 409) {
-        console.log('Username Taken');
-      } else {
-        console.log('Registration Failed')
-      }
-    }
-  }
+  useEffect(() => {
+    setValidName(USER_REGEX.test(name));
+}, [name])
+
 
   return (
     <>
@@ -60,13 +42,14 @@ export default function Login() {
                 Care For You<span className="text-main">.</span>
               </p>
             </div>
-            <div className="w-full max-w-md text-center pb-24">
+            <div className="w-full max-w-md text-center pb-10">
               <h1 className="font-bold text-4xl">Sign Up</h1>
               <p className="text-gray-600 pt-2 pb-4">Nursing, Care, Help</p>
-              <h1 className="font-bold text-4xl">Sign as a <span className='text-main'>{typeUser}</span></h1>
+              <h1 className="font-bold text-4xl mb-5">Sign as a <span className='text-main'>{typeUser}</span></h1>
               <form className="pl-3 pr-3 space-y-8" action="#" method="POST" onSubmit={(e) => {
                 handleSubmit(e)
               }}>
+                <div>
                 <input type="hidden" name="remember" value="true" />
                 <input
                   id="user-name"
@@ -78,7 +61,10 @@ export default function Login() {
                   className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
                   placeholder="Enter Your Name"
                   onChange={(e) => { setName(e.target.value) }}
+                  onFocus={()=>setIsnameFocus(true)}
                 />
+                <p className={isnameFocus && !validName ? 'text-start text-red-600 text-md font-medium' :'hidden'}>You name Should from 4 to 24 characters. </p>
+                </div>
                 <input
                   id="email-address"
                   name="email"
@@ -90,21 +76,34 @@ export default function Login() {
                   placeholder="Email address"
                   onChange={(e) => { setEmail(e.target.value) }}
                 />
+                <div className='flex relative'>
                 <input
                   id="password"
                   name="password"
-                  type="password"
+                  type={isPasswordVisible ? 'text' : 'password'}
                   value={password}
                   autoComplete="current-password"
                   required
-                  className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
+                  className=" w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
                   placeholder="Password"
                   onChange={(e) => { setPassword(e.target.value) }}
-                />
+                  />
+                {
+                  isPasswordVisible ?
+                  <div className='absolute right-5 top-5' onClick={()=>setIsPasswordVisible(false)}>
+                  <AiFillEyeInvisible  className='text-3xl'/> 
+                  </div>
+                  :
+                  <div className='absolute right-5 top-5' onClick={()=>setIsPasswordVisible(true)}>
+                  <AiFillEye className='text-3xl'/> 
+                  </div> 
+                }
+                </div>
+                <div className='flex relative'>
                 <input
                   id="confirmPassword"
                   name="password"
-                  type="password"
+                  type={isConPasswordVisible ? 'text' : 'password'}
                   value={conPassword}
                   autoComplete="current-password"
                   required
@@ -112,11 +111,19 @@ export default function Login() {
                   placeholder="Confirm a Password"
                   onChange={(e) => { setConPassword(e.target.value) }}
                 />
+                { isConPasswordVisible ?
+                  <div className='absolute right-5 top-5' onClick={()=>setIsConPasswordVisible(false)}>
+                  <AiFillEyeInvisible  className='text-3xl'/> 
+                  </div>
+                  :
+                  <div className='absolute right-5 top-5' onClick={()=>setIsConPasswordVisible(true)}>
+                  <AiFillEye className='text-3xl'/> 
+                  </div> 
+                }
+                </div>
                 <button
                   type="submit"
                   className="w-full my-3 rounded-md bg-main py-2 text-xl font-medium text-white "
-                //   onClick={()=>{
-                //  handleSubmit() }}
                 >
                   Sign Up
                 </button>
@@ -149,7 +156,39 @@ export default function Login() {
               </button>
             </div>
           </div>
-        </div>}
+        </div>
+      }
     </>
   );
 }
+
+  // async function handleSubmit(e) {
+                  //   e.preventDefault();
+                  //   console.log(email);
+                  //   console.log(password);
+                  //   console.log(name);
+                  //   try {
+                  //     const response = await axios.post("https://care-for-you-v1.000webhostapp.com/api/auth/register",
+                  //       {
+                  //         email: email,
+                  //         password: password,
+                  //         name: name
+                  //       },
+                  //       {
+                  //         headers: { 'Content-Type': 'application/json' },
+                  //         withCredentials: true
+                  //       }
+                  //     );
+                  //     console.log(response?.data);
+                  //     console.log(response?.accessToken);
+                  //     console.log(JSON.stringify(response))
+                  //   } catch (err) {
+                  //     if (!err?.response) {
+                  //       console.log('No Server Response');
+                  //     } else if (err.response?.status === 409) {
+                  //       console.log('Username Taken');
+                  //     } else {
+                  //       console.log('Registration Failed')
+                  //     }
+                  //   }
+  // }
