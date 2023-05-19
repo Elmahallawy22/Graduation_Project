@@ -1,30 +1,64 @@
 import { Navbar } from "./Navbar";
 import { Tabbars } from "./Tabbars";
 import { Welcome } from "./Welcome";
-import { createContext , useState } from "react";
+import { DashNavber } from "./dashboard/navbar/DashNavber";
+import { DashSideber } from "./dashboard/sidebar/DashSidebar";
+import { createContext, useEffect, useState } from "react";
 
 export const StateContext = createContext();
+export const StateContextDashboard = createContext();
 
 export function Layout(props) {
-  setTimeout(() => {
-    document.querySelector('.welcome').style.display="none"    
-    document.querySelector('.website').style.display="block"    
-  }, 1000);
-  const [activePages, setActivePages] = useState('home');  
+  // setTimeout(() => {
+  //   document.querySelector('.welcome').style.display="none"    
+  //   document.querySelector('.website').style.display="block"    
+  // }, 1000);
+  const [activePages, setActivePages] = useState('home');
   const [activeLogin, setActiveLogin] = useState('signUp');
-  
+  const [path, setPath] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname === '/dashboard')
+      setPath(false)
+  }, [])
+
   return (
     <>
-    <div className="welcome">
+      {/* <div className="welcome">
         <Welcome/>
-    </div>
-    <div className="website" style={{display:'none'}}>
-      <StateContext.Provider value={{ activePages, setActivePages , activeLogin , setActiveLogin}}>
-        <Navbar/>
-        {props.children}
-        <Tabbars/>
-      </StateContext.Provider>
-    </div>
+    </div> */}
+      <>
+        {path ?
+          <div className="website" style={{ display: 'one' }}>
+            <StateContext.Provider value={{ activePages, setActivePages, activeLogin, setActiveLogin }}>
+              <Navbar />
+              {props.children}
+              <Tabbars />
+            </StateContext.Provider>
+          </div>
+          :
+          <div className="website" style={{ display: 'one' }}>
+            <StateContext.Provider value={{ activeMenu, setActiveMenu }}>
+              <div className="flex">
+                {activeMenu ? (
+                  <div className="w-1/6">
+                    <DashSideber />
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+                <div className={`${activeMenu ? "w-5/6" : "w-full"}`}>
+                  <DashNavber />
+                  <div className="bg-gray-200 h-screen">
+                    {props.children}
+                  </div>
+                </div>
+              </div>
+            </StateContext.Provider>
+          </div>
+        }
+      </>
     </>
   )
 }

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
 import { useDropzone } from 'react-dropzone';
-import { BsFillCameraFill } from 'react-icons/bs'
 
 const Dropzone = () => {
   const [files, setFiles] = useState([]);
