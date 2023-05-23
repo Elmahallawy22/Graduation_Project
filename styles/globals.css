@@ -288,5 +288,32 @@ button {
   display: block;
 }
 
-
 /* ---------------------------- end-user-details ------------------------- */
+/* ----------------- table style ------------ */
+#orders{
+  overflow:auto ;
+  padding: 10px;
+}
+table {
+  border: 1px gray solid;
+  width: 180vh;
+  overflow: scroll;
+  border-radius: 10px;
+}
+thead{
+  color: white;
+}
+thead tr td{
+  background-color: var(--main-color) !important;
+  padding: 10px  0 ;
+  font-size: 20px;
+  font-weight: bold;
+}
+td{
+  padding: 10px  0 ;
+  text-align: center ;
+  border: 1px gray solid;
+  font-size: 20px;
+  background-color: white;
+}
+/* ----------------- table style ------------ */

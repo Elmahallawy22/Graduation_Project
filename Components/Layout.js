@@ -19,7 +19,7 @@ export function Layout(props) {
   const [activeMenu, setActiveMenu] = useState(false);
 
   useEffect(() => {
-    if (window.location.pathname === '/dashboard')
+    if (window.location.pathname === '/dashboard' || window.location.pathname === '/dashboard/order')
       setPath(false)
   }, [])
 
@@ -50,7 +50,7 @@ export function Layout(props) {
                 )}
                 <div className={`${activeMenu ? "w-5/6" : "w-full"}`}>
                   <DashNavber />
-                  <div className="bg-gray-200 h-screen">
+                  <div className="bg-slate-100 min-h-screen">
                     {props.children}
                   </div>
                 </div>

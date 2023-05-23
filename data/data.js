@@ -1,3 +1,16 @@
+import React from 'react';
+import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
+import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
+import { BiColorFill } from 'react-icons/bi';
+import { IoMdContacts } from 'react-icons/io';
+import { RiContactsLine, RiStockLine } from 'react-icons/ri';
+import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { HiOutlineRefresh } from 'react-icons/hi';
+import { TiTick } from 'react-icons/ti';
+import { GiLouvrePyramid } from 'react-icons/gi';
+import { GrLocation } from 'react-icons/gr';
+
 export const users = [
   {
     "address": {
@@ -141,7 +154,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '1569'
   },
   {
@@ -158,7 +171,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '5609'
   },
   {
@@ -175,7 +188,7 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '9609'
   },
   {
@@ -226,7 +239,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '1209'
   },
   {
@@ -243,7 +256,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '1409'
   },
   {
@@ -260,7 +273,7 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '1459'
   },
   {
@@ -311,7 +324,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
   },
   {
@@ -328,7 +341,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -346,7 +359,7 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '35689'
   },
   {
@@ -398,7 +411,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -416,7 +429,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -434,7 +447,7 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -487,7 +500,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
   },
   {
@@ -505,7 +518,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
   },
   {
@@ -522,7 +535,7 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
   },
   {
@@ -574,7 +587,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '8778'
   },
   {
@@ -591,7 +604,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
   },
   {
@@ -608,7 +621,7 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA' ,
+    Location: 'Cairo' ,
     Destance: '3568'
   },
   {
@@ -661,7 +674,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -679,7 +692,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -697,7 +710,7 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -751,7 +764,7 @@ export const usersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '24.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -769,7 +782,7 @@ export const usersData = [
     StatusBg: '#2196f3',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
   },
@@ -789,8 +802,736 @@ export const usersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '16.5k',
-    Location: 'USA',
+    Location: 'Cairo',
     Destance: '3568'
 
+  },
+];
+
+export const ordersData = [
+  {
+    OrderID: 10248,
+    CustomerName: 'Mohamed Elkhadir',
+    TotalAmount: 32.38,
+    OrderItems: 'Special',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'
+  },
+  {
+    OrderID: 345653,
+    CustomerName: 'Youssef Elmahallawy',
+    TotalAmount: 56.34,
+    OrderItems: 'Psychiatric',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXAg7ixL66o3ohqCSEa1lQlY_FFJZ3tfS-Uw&usqp=CAU'
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Youssef Elsayed',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Aswan',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'
+  },
+  {
+    OrderID: 893486,
+    CustomerName: 'Mohamed Taleet',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Dubai',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 748975,
+    CustomerName: 'Mohamed khaled',
+    TotalAmount: 23.99,
+    OrderItems: 'Emergancy',
+    Location: 'Talkha',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 94757,
+    CustomerName: 'Omar Darobe',
+    TotalAmount: 95.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 944895,
+    CustomerName: 'Lulia albu',
+    TotalAmount: 17.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Eslam Mohamed',
+    TotalAmount: 59.99,
+    OrderItems: 'Pediatic',
+    Location: 'Cairo',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Habeba Ahmed',
+    TotalAmount: 87.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 38489,
+    CustomerName: 'Mazen ibrahim',
+    TotalAmount: 87.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 24546,
+    CustomerName: 'Fares Elgen',
+    TotalAmount: 84.99,
+    OrderItems: 'Pediatic',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 10248,
+    CustomerName: 'Mohamed Elkhadir',
+    TotalAmount: 32.38,
+    OrderItems: 'Special',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 345653,
+    CustomerName: 'Youssef Elmahallawy',
+    TotalAmount: 56.34,
+    OrderItems: 'Psychiatric',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',   
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXAg7ixL66o3ohqCSEa1lQlY_FFJZ3tfS-Uw&usqp=CAU'
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Youssef Elsayed',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Aswan',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 893486,
+    CustomerName: 'Mohamed Taleet',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Dubai',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 748975,
+    CustomerName: 'Mohamed khaled',
+    TotalAmount: 23.99,
+    OrderItems: 'Emergancy',
+    Location: 'Talkha',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 94757,
+    CustomerName: 'Omar Darobe',
+    TotalAmount: 95.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 944895,
+    CustomerName: 'Lulia albu',
+    TotalAmount: 17.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Eslam Mohamed',
+    TotalAmount: 59.99,
+    OrderItems: 'Pediatic',
+    Location: 'Cairo',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Habeba Ahmed',
+    TotalAmount: 87.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 38489,
+    CustomerName: 'Mazen ibrahim',
+    TotalAmount: 87.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 24546,
+    CustomerName: 'Fares Elgen',
+    TotalAmount: 84.99,
+    OrderItems: 'Pediatic',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 10248,
+    CustomerName: 'Mohamed Elkhadir',
+    TotalAmount: 32.38,
+    OrderItems: 'Special',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 345653,
+    CustomerName: 'Youssef Elmahallawy',
+    TotalAmount: 56.34,
+    OrderItems: 'Psychiatric',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXAg7ixL66o3ohqCSEa1lQlY_FFJZ3tfS-Uw&usqp=CAU'
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Youssef Elsayed',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Aswan',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 893486,
+    CustomerName: 'Mohamed Taleet',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Dubai',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 748975,
+    CustomerName: 'Mohamed khaled',
+    TotalAmount: 23.99,
+    OrderItems: 'Emergancy',
+    Location: 'Talkha',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 94757,
+    CustomerName: 'Omar Darobe',
+    TotalAmount: 95.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 944895,
+    CustomerName: 'Lulia albu',
+    TotalAmount: 17.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Eslam Mohamed',
+    TotalAmount: 59.99,
+    OrderItems: 'Pediatic',
+    Location: 'Cairo',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Habeba Ahmed',
+    TotalAmount: 87.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 38489,
+    CustomerName: 'Mazen ibrahim',
+    TotalAmount: 87.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 24546,
+    CustomerName: 'Fares Elgen',
+    TotalAmount: 84.99,
+    OrderItems: 'Pediatic',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 10248,
+    CustomerName: 'Mohamed Elkhadir',
+    TotalAmount: 32.38,
+    OrderItems: 'Special',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 345653,
+    CustomerName: 'Youssef Elmahallawy',
+    TotalAmount: 56.34,
+    OrderItems: 'Psychiatric',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXAg7ixL66o3ohqCSEa1lQlY_FFJZ3tfS-Uw&usqp=CAU'
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Youssef Elsayed',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Aswan',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 893486,
+    CustomerName: 'Mohamed Taleet',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Dubai',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 748975,
+    CustomerName: 'Mohamed khaled',
+    TotalAmount: 23.99,
+    OrderItems: 'Emergancy',
+    Location: 'Talkha',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 94757,
+    CustomerName: 'Omar Darobe',
+    TotalAmount: 95.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 944895,
+    CustomerName: 'Lulia albu',
+    TotalAmount: 17.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Eslam Mohamed',
+    TotalAmount: 59.99,
+    OrderItems: 'Pediatic',
+    Location: 'Cairo',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Habeba Ahmed',
+    TotalAmount: 87.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 38489,
+    CustomerName: 'Mazen ibrahim',
+    TotalAmount: 87.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 24546,
+    CustomerName: 'Fares Elgen',
+    TotalAmount: 84.99,
+    OrderItems: 'Pediatic',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 10248,
+    CustomerName: 'Mohamed Elkhadir',
+    TotalAmount: 32.38,
+    OrderItems: 'Special',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU' },
+  {
+    OrderID: 345653,
+    CustomerName: 'Youssef Elmahallawy',
+    TotalAmount: 56.34,
+    OrderItems: 'Psychiatric',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXAg7ixL66o3ohqCSEa1lQlY_FFJZ3tfS-Uw&usqp=CAU'
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Youssef Elsayed',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Aswan',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 893486,
+    CustomerName: 'Mohamed Taleet',
+    TotalAmount: 93.31,
+    OrderItems: 'Special',
+    Location: 'Dubai',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRoIhmonGk6DkmrVcuZqKRsNmOkySzC1s-ld9IzVIcI2pVhAU6ThAYA2PzGS5wEWQt0E&usqp=CAU'},
+  {
+    OrderID: 748975,
+    CustomerName: 'Mohamed khaled',
+    TotalAmount: 23.99,
+    OrderItems: 'Emergancy',
+    Location: 'Talkha',
+    Status: 'rejected',
+    StatusBg: 'red',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 94757,
+    CustomerName: 'Omar Darobe',
+    TotalAmount: 95.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 944895,
+    CustomerName: 'Lulia albu',
+    TotalAmount: 17.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Eslam Mohamed',
+    TotalAmount: 59.99,
+    OrderItems: 'Pediatic',
+    Location: 'Cairo',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 845954,
+    CustomerName: 'Habeba Ahmed',
+    TotalAmount: 87.99,
+    OrderItems: 'Eaderly',
+    Location: 'Cairo',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvnWRR38BLQTtCPhUWe-FCo26kyC5A8zI-A&usqp=CAU',
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+  {
+    OrderID: 38489,
+    CustomerName: 'Mazen ibrahim',
+    TotalAmount: 87.99,
+    OrderItems: 'Woman',
+    Location: 'Cairo',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROw6cBK8RQBDoi-q9XVB3Y8Yyhrv4fPlDF3A&usqp=CAU',
+  },
+  {
+    OrderID: 24546,
+    CustomerName: 'Fares Elgen',
+    TotalAmount: 84.99,
+    OrderItems: 'Pediatic',
+    Location: 'Alexanderia',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZUAkiXJ6wBElY33-lkR1w-plRf361BlgGQ&usqp=CAU'
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Mahmoud Ahmed',
+    TotalAmount: 122.99,
+    OrderItems: 'Emergancy',
+    Location: 'Cairo',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage:  'https://media.istockphoto.com/id/1330919226/photo/group-of-doctors-nurses-paramedics-push-gurney-stretcher-with-seriously-trauma-patient.jpg?s=612x612&w=0&k=20&c=SmWPDdU64qhVVXTnn4tOz8mJ0_00Gbn9Bzsbv4SkLDI=',
+  },
+];
+export const contextMenuItems = [
+  'AutoFit',
+  'AutoFitAll',
+  'SortAscending',
+  'SortDescending',
+  'Copy',
+  'Edit',
+  'Delete',
+  'Save',
+  'Cancel',
+  'PdfExport',
+  'ExcelExport',
+  'CsvExport',
+  'FirstPage',
+  'PrevPage',
+  'LastPage',
+  'NextPage',
+];
+
+export const gridOrderImage = (props) => (
+  <div>
+    <img
+      className="rounded-xl h-20 md:ml-3"
+      src={props.ProductImage}
+      alt="order-item"
+    />
+  </div>
+);
+export const gridOrderStatus = (props) => (
+  <button
+    type="button"
+    style={{ background: props.StatusBg }}
+    className="text-white py-1 px-2 capitalize rounded-2xl text-md"
+  >
+    {props.Status}
+  </button>
+);
+export const ordersGrid = [
+  {
+    headerText: 'Image',
+    template: gridOrderImage,
+    textAlign: 'Center',
+    width: '120',
+  },
+  {
+    field: 'OrderItems',
+    headerText: 'Item',
+    width: '150',
+    editType: 'dropdownedit',
+    textAlign: 'Center',
+  },
+  { field: 'CustomerName',
+    headerText: 'Customer Name',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'TotalAmount',
+    headerText: 'Total Amount',
+    format: 'C2',
+    textAlign: 'Center',
+    editType: 'numericedit',
+    width: '150',
+  },
+  {
+    headerText: 'Status',
+    template: gridOrderStatus,
+    field: 'OrderItems',
+    textAlign: 'Center',
+    width: '120',
+  },
+  {
+    field: 'OrderID',
+    headerText: 'Order ID',
+    width: '120',
+    textAlign: 'Center',
+  },
+
+  {
+    field: 'Location',
+    headerText: 'Location',
+    width: '150',
+    textAlign: 'Center',
   },
 ];

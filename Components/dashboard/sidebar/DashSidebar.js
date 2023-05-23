@@ -24,11 +24,11 @@ export function DashSideber() {
       </div>
       <div className='py-6 px-2 xl:px-7 2xl:px-10 '>
         <CategoryName icon={<MdDashboardCustomize />} title='Dashboard' />
-        <ItemOfMenu icon={<HiHome />} name='Home' />
+        <ItemOfMenu icon={<HiHome />} name='Home' link='/dashboard'/>
         <CategoryName icon={<SiPowerpages />} title='page' />
-        <ItemOfMenu icon={<BsCartCheck />} name='Orders' />
-        <ItemOfMenu icon={<MdOutlinePeople />} name='Nurses' />
-        <ItemOfMenu icon={<BsFillPeopleFill />} name='Patient' />
+        <ItemOfMenu icon={<BsCartCheck />} name='Order' link='/dashboard/order' />
+        <ItemOfMenu icon={<MdOutlinePeople />} name='Nurses' link='/dashboard/nurses' />
+        <ItemOfMenu icon={<BsFillPeopleFill />} name='Patient' link='/dashboard/patient' />
         <CategoryName icon={<BsFillMenuAppFill />} title='App' />
         <ItemOfMenu icon={<BsFillKanbanFill />} name='Kanban' />
         <ItemOfMenu icon={<BiMessageSquareEdit />} name='Editor' />
