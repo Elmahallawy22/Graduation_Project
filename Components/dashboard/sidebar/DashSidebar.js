@@ -28,11 +28,13 @@ export function DashSideber() {
         <CategoryName icon={<SiPowerpages />} title='page' />
         <ItemOfMenu icon={<BsCartCheck />} name='Order' link='/dashboard/order' />
         <ItemOfMenu icon={<MdOutlinePeople />} name='Nurses' link='/dashboard/nurses' />
-        <ItemOfMenu icon={<BsFillPeopleFill />} name='Patient' link='/dashboard/patient' />
+        <ItemOfMenu icon={<BsFillPeopleFill />} name='Patient' link='/dashboard/patients' />
         <CategoryName icon={<BsFillMenuAppFill />} title='App' />
+        
         <ItemOfMenu icon={<BsFillKanbanFill />} name='Kanban' />
         <ItemOfMenu icon={<BiMessageSquareEdit />} name='Editor' />
         <ItemOfMenu icon={<MdColorLens />} name='Color-Pick' />
+        
         <CategoryName icon={<SiApacheecharts />} title='Chatrs' />
         <ItemOfMenu icon={<AiOutlineLineChart />} name='Line' />
         <ItemOfMenu icon={<AiOutlineAreaChart />} name='Area' />

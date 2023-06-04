@@ -290,7 +290,7 @@ button {
 
 /* ---------------------------- end-user-details ------------------------- */
 /* ----------------- table style ------------ */
-#orders{
+#table{
   overflow:auto ;
   padding: 10px;
 }
