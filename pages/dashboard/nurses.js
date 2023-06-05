@@ -16,8 +16,8 @@ function Nurses() {
         <div id='table' className={`flex ${activeMenu === false ? 'md:justify-center' : ''}`}>
           <div>
             <TableForPages type='nurses' items={nurses} one="Image" two="Nurse Name"
-              three="Gender" four="Service" five='Status'
-              six="Location" />
+              three="Gender" four="Service" five="Service Price" six='Status'
+              seven="Location" />
           </div>
         </div>
       </div>

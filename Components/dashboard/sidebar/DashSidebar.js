@@ -25,17 +25,18 @@ export function DashSideber() {
       <div className='py-6 px-2 xl:px-7 2xl:px-10 '>
         <CategoryName icon={<MdDashboardCustomize />} title='Dashboard' />
         <ItemOfMenu icon={<HiHome />} name='Home' link='/dashboard'/>
-        <CategoryName icon={<SiPowerpages />} title='page' />
-        <ItemOfMenu icon={<BsCartCheck />} name='Order' link='/dashboard/order' />
-        <ItemOfMenu icon={<MdOutlinePeople />} name='Nurses' link='/dashboard/nurses' />
-        <ItemOfMenu icon={<BsFillPeopleFill />} name='Patient' link='/dashboard/patients' />
-        <CategoryName icon={<BsFillMenuAppFill />} title='App' />
         
+        <CategoryName icon={<SiPowerpages />} title='page' />
+        <ItemOfMenu icon={<BsCartCheck />} name='Orders' link='/dashboard/order' />
+        <ItemOfMenu icon={<MdOutlinePeople />} name='Nurses' link='/dashboard/nurses' />
+        <ItemOfMenu icon={<BsFillPeopleFill />} name='Patients' link='/dashboard/patients' />
+        
+        <CategoryName icon={<BsFillMenuAppFill />} title='App' />
         <ItemOfMenu icon={<BsFillKanbanFill />} name='Kanban' />
         <ItemOfMenu icon={<BiMessageSquareEdit />} name='Editor' />
         <ItemOfMenu icon={<MdColorLens />} name='Color-Pick' />
         
-        <CategoryName icon={<SiApacheecharts />} title='Chatrs' />
+        <CategoryName icon={<SiApacheecharts />} title='Charts' />
         <ItemOfMenu icon={<AiOutlineLineChart />} name='Line' />
         <ItemOfMenu icon={<AiOutlineAreaChart />} name='Area' />
         <ItemOfMenu icon={<AiOutlineBarChart />} name='Bar' />
