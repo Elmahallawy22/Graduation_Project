@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import { FiChevronsRight } from 'react-icons/fi';
 import { FiChevronsLeft } from 'react-icons/fi';
+const num = 15; // number of items in table...........
 
 function TableForPages(props) {
   const [startItem, setStartItem] = useState(0)
-  const [endItem, setEndItem] = useState(20)
+  const [endItem, setEndItem] = useState(num);
+  const items = [];
+  for (let i = 0; i <= Math.ceil(props.items.length / num) - 1; i++) {
+    items.push(
+      <span className={`spans span${i} px-3 py-1 border-2 border-white rounded-full mx-1 font-bold  ${ startItem === num * i  && 'bg-white' }`}
+        onClick={() => { setStartItem(i * num); setEndItem((i + 1) * num) }} > {i + 1} </span>
+    )
+  }
   return (
     <>
       <table className=''>
@@ -22,7 +30,8 @@ function TableForPages(props) {
         </thead>
         {props.type == "order" &&
           <tbody>
-            {props.items.map((item, index) => {
+            {props.items.map((
+              item, index) => {
               if (index >= startItem && index < endItem) {
                 return (
                   <tr>
@@ -44,7 +53,7 @@ function TableForPages(props) {
               if (index >= startItem && index < endItem) {
                 return (
                   <tr key={index.ID}>
-                    <td className='flex justify-center'><img src={item.Image} width='70px' style={{height:'50px'}} /></td>
+                    <td className='flex justify-center'><img src={item.Image} width='70px' style={{ height: '50px' }} /></td>
                     <td className='font-bold'>{item.Name}</td>
                     <td>{item.Gender}</td>
                     <td>{item.Service}.</td>
@@ -61,7 +70,7 @@ function TableForPages(props) {
               if (index >= startItem && index < endItem) {
                 return (
                   <tr key={index.ID}>
-                    <td className='flex justify-center'><img src={item.Image} width='70px' style={{height:'50px'}} /></td>
+                    <td className='flex justify-center'><img src={item.Image} width='70px' style={{ height: '50px' }} /></td>
                     <td className='font-bold'>{item.Name}</td>
                     <td>{item.Gender}</td>
                     <td>{item.Service}</td>
@@ -76,32 +85,16 @@ function TableForPages(props) {
       </table>
       <div className='py-2 flex bg-white w-full justify-center items-center bg-main'>
         <span onClick={() => {
-          if (startItem >= 20) {
-            setStartItem(startItem - 20);
-            setEndItem(endItem - 20);
+          if (startItem >= num) {
+            setStartItem(startItem - num);
+            setEndItem(endItem - num);
           }
         }}><FiChevronsLeft className='text-3xl text-white' /></span>
-        <span className={`px-3 py-1 border-2 border-white rounded-full mx-1 font-bold ${startItem === 0 ? 'bg-white' : 'text-white'}`}
-          onClick={() => {
-            setStartItem(0)
-            setEndItem(20)
-          }}>1</span>
-        <span className={`px-3 py-1 border-2 border-white rounded-full mx-1 font-bold ${startItem === 20 ? 'bg-white' : 'text-white'}`} onClick={() => {
-          setStartItem(20)
-          setEndItem(40)
-        }}>2</span>
-        <span className={`px-3 py-1 border-2 border-white rounded-full mx-1 font-bold ${startItem === 40 ? 'bg-white' : 'text-white'}`} onClick={() => {
-          setStartItem(40)
-          setEndItem(60)
-        }}>3</span>
-        <span className={`px-3 py-1 border-2 border-white rounded-full mx-1 font-bold ${startItem === 60 ? 'bg-white' : 'text-white'}`} onClick={() => {
-          setStartItem(60)
-          setEndItem(80)
-        }}>4</span>
+        {items}
         <span onClick={() => {
-          if (startItem <= 40) {
-            setStartItem(startItem + 20);
-            setEndItem(endItem + 20);
+          if (startItem <= num * (Math.ceil(props.items.length / num) - 2)) {
+            setStartItem(startItem + num);
+            setEndItem(endItem + num);
           }
         }}><FiChevronsRight className='text-3xl text-white' /></span>
       </div>
