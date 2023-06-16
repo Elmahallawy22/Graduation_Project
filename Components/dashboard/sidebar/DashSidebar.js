@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { StateContext } from '../../Layout';
 import { BsChevronDoubleLeft , BsFillMenuAppFill , BsFillKanbanFill ,BsCartCheck, BsFillPeopleFill, BsPinMapFill } from 'react-icons/bs'
 import { ItemOfMenu } from './ItemOfMenu';
@@ -9,8 +9,6 @@ import { BiMessageSquareEdit } from 'react-icons/bi';
 import { FaMoneyBillWave  } from 'react-icons/fa';
 import { MdDashboardCustomize, MdOutlinePeople , MdColorLens} from 'react-icons/md';
 import { SiPowerpages , SiApacheecharts} from 'react-icons/si';
-
-
 
 export function DashSideber() {
   const { activeMenu, setActiveMenu } = useContext(StateContext);
@@ -24,18 +22,18 @@ export function DashSideber() {
       </div>
       <div className='py-6 px-2 xl:px-7 2xl:px-10 '>
         <CategoryName icon={<MdDashboardCustomize />} title='Dashboard' />
-        <ItemOfMenu icon={<HiHome />} name='Home' link='/dashboard'/>
-        <ItemOfMenu icon={<BsPinMapFill />} name='Map' link='/dashboard/map' />
+        <ItemOfMenu className='item' icon={<HiHome />} name='Home' link='/dashboard' />
         
         <CategoryName icon={<SiPowerpages />} title='page' />
-        <ItemOfMenu icon={<BsCartCheck />} name='Orders' link='/dashboard/order' />
-        <ItemOfMenu icon={<MdOutlinePeople />} name='Nurses' link='/dashboard/nurses' />
-        <ItemOfMenu icon={<BsFillPeopleFill />} name='Patients' link='/dashboard/patients' />
+        <ItemOfMenu className='item' icon={<BsCartCheck />} name='Orders' link='/dashboard/order'/>
+        <ItemOfMenu className='item' icon={<MdOutlinePeople />} name='Nurses' link='/dashboard/nurses'/>
+        <ItemOfMenu className='item' icon={<BsFillPeopleFill />} name='Patients' link='/dashboard/patients'/>
         
         <CategoryName icon={<BsFillMenuAppFill />} title='App' />
-        <ItemOfMenu icon={<BsFillKanbanFill />} name='Kanban' />
-        <ItemOfMenu icon={<BiMessageSquareEdit />} name='Editor' />
-        <ItemOfMenu icon={<MdColorLens />} name='Color-Pick' />
+        <ItemOfMenu className='item'icon={<BsPinMapFill />} name='Map' link='/dashboard/map'/>
+        <ItemOfMenu className='item' icon={<BsFillKanbanFill />} name='Kanban' />
+        <ItemOfMenu className='item' icon={<BiMessageSquareEdit />} name='Editor'/>
+        <ItemOfMenu className='item' icon={<MdColorLens />} name='Color-Pick' />
         
         <CategoryName icon={<SiApacheecharts />} title='Charts' />
         <ItemOfMenu icon={<AiOutlineLineChart />} name='Line' />
