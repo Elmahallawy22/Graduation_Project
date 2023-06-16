@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import { StateContext } from '../../Layout';
-import { BsChevronDoubleLeft , BsFillMenuAppFill , BsFillKanbanFill ,BsCartCheck, BsFillPeopleFill } from 'react-icons/bs'
+import { BsChevronDoubleLeft , BsFillMenuAppFill , BsFillKanbanFill ,BsCartCheck, BsFillPeopleFill, BsPinMapFill } from 'react-icons/bs'
 import { ItemOfMenu } from './ItemOfMenu';
 import { CategoryName } from './CategoryName';
 import { HiHome } from 'react-icons/hi';
 import { AiOutlineLineChart , AiOutlineAreaChart , AiOutlineBarChart , AiOutlinePieChart, AiFillPieChart  } from 'react-icons/ai';
 import { BiMessageSquareEdit } from 'react-icons/bi';
-import { FaMoneyBillWave } from 'react-icons/fa';
+import { FaMoneyBillWave  } from 'react-icons/fa';
 import { MdDashboardCustomize, MdOutlinePeople , MdColorLens} from 'react-icons/md';
 import { SiPowerpages , SiApacheecharts} from 'react-icons/si';
 
@@ -25,6 +25,7 @@ export function DashSideber() {
       <div className='py-6 px-2 xl:px-7 2xl:px-10 '>
         <CategoryName icon={<MdDashboardCustomize />} title='Dashboard' />
         <ItemOfMenu icon={<HiHome />} name='Home' link='/dashboard'/>
+        <ItemOfMenu icon={<BsPinMapFill />} name='Map' link='/dashboard/map' />
         
         <CategoryName icon={<SiPowerpages />} title='page' />
         <ItemOfMenu icon={<BsCartCheck />} name='Orders' link='/dashboard/order' />

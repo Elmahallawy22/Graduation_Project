@@ -344,5 +344,16 @@ td{
 }
 .item-top {
   padding: 8px 64px 8px 8px;
-
+}
+.mapouter{
+  /* position:relative; */
+  text-align:right;
+  height:1000px;
+  width:100%;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:100%;
+  width:100%;
 }
