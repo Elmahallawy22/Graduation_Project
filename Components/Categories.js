@@ -3,8 +3,8 @@ import Link from "next/link";
 function Categories() {
   
   return (
-    <div className="flex justify-center pt-8 pb-16 " id='services'>
-      <div className="container">
+<div className="flex justify-center pt-8 pb-16 " id='services'>
+      <div className="container">    
         <div className="flex flex-wrap justify-center gap-2 md:gap-5 mt-10 lg:mt-16 font-bold text-white text-center text-2xl lg:text-3xl ">
           <Link href='/' className="category overflow-hidden flex flex-col rounded-lg bg-main sm:w-5/12 xl:w-1/4">
             <p className="py-2 lg:py-3">Pediatic Nursing</p>

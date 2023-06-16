@@ -1,12 +1,20 @@
 import Head from 'next/head';
-// import {SparkLine} from '../../Components/dashboard/SparkLine.jsx'
+import { PageTitle } from '../../Components/dashboard/PageTitle';
+import { Boxes } from '../../Components/dashboard/home/Boxes';
+import { Overview } from '../../Components/dashboard/home/Overview';
 function Dashboard() {
   return (
     <>
-    <Head>
+      <Head>
         <title>Our Dashboard</title>
-    </Head>
-    {/* <SparkLine/> */}
+      </Head>
+      <div className='py-3 lg:py-5 '>
+        <PageTitle category='DashBoard' page='Home' />
+        <div className='px-6'>
+        <Boxes />
+        <Overview/>
+        </div>
+      </div>
     </>
   )
 }
