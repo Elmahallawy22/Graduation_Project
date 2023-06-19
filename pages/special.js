@@ -1,20 +1,52 @@
 import Head from 'next/head';
 import Headofsection from '../Components/Headofsection';
-import { usersData } from '../data/data';
+import { specialNurse } from '../data/data';
 import Cards from '../Components/cards';
-import { useEffect } from 'react';
+
 import { useState } from 'react';
-// import { log } from 'console';
+import { useEffect } from 'react';
 
 function Special() {
-  const [userData , setUserData] = useState({})
-  useEffect(()=>{
+  const [userData , setUserData] = useState(specialNurse);
+  
+  const allOfAbove = () => {
+    setUserData(specialNurse);
+  }
 
-    fetch('https://fakestoreapi.com/products')
-    .then(res=>res.json())
-    .then(json=>setUserData(json))
-    console.log(userData);
-  },[])
+  const activeUser = () => {
+    setUserData([]);
+    const list = [];
+    specialNurse.map((item) => {
+      if (item.Status === 'active')
+        list.push(item);
+    })
+    setUserData(list);
+  }
+  const maleUser = () => {
+    setUserData([]);
+    const list = [];
+    specialNurse.map((item) => {
+      if (item.Gender === 'Male')
+        list.push(item);
+    })
+    setUserData(list);
+  }
+  const femaleUser = () => {
+    setUserData([]);
+    const list = [];
+    specialNurse.map((item) => {
+      if (item.Gender === 'Female')
+        list.push(item);
+    })
+    setUserData(list);
+  }
+  useEffect(() => {
+    maleUser();
+    femaleUser();
+    activeUser();
+    allOfAbove();
+  }, []);
+  const filterButton = `text-2xl px-4 py-2 m-2 rounded-full hover-btn text-white bg-main `
   return (
     <>
       <Head>
@@ -26,12 +58,31 @@ function Special() {
           rel="stylesheet"></link>
       </Head>
       <Headofsection title='Special Nursing' />
-      <div className='flex justify-center mt-10'>
-        <div className='container p-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-5'>
-          <Cards users={usersData} />
+      <div className='mt-10'>
+      <div className='filter-div flex  justify-center bg-white' >
+        <div className='filter'>
+          <button className={filterButton} onClick={() => {
+            allOfAbove();
+          }}>All Of Above</button>
+          <button className={filterButton} onClick={() => {
+            activeUser();
+          }}>Active</button>
+          <button className={filterButton} onClick={() => {
+            allOfAbove();
+          }}>All Genders</button>
+          <button className={filterButton} onClick={() => {
+            maleUser();
+          }}>Male</button>
+          <button className={filterButton} onClick={() => {
+            femaleUser();
+          }}>Female</button>
         </div>
-        
-
+      </div>
+        <div className='flex justify-center mt-6'>
+        <div className='container p-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-5'>
+          <Cards users={userData} />
+        </div>
+        </div>
       </div>
     </>
   )
