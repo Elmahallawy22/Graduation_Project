@@ -7,20 +7,21 @@ import { GiAges } from "react-icons/gi";
 import { FaMoneyBillWave, FaStar } from "react-icons/fa";
 import { MdCastForEducation, MdDriveFileRenameOutline, MdDescription } from "react-icons/md";
 import { BsGenderFemale, BsGenderMale, BsWhatsapp, BsFillCartCheckFill, BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
-import { useEffect, useState } from 'react';
+import { useEffect, useState ,useContext} from 'react';
+import {StateContext} from '../../Components/Layout';
 
 function Id() {
   const [user, setUser] = useState({})
   const [age, setAge] = useState(0)
-  const [showActive, setShowActive] = useState(false)
+  const [showActive, setShowActive] = useState(false);
+  const {userId ,  setUserId} = useContext(StateContext);
   const params = useRouter();
   useEffect(() => {
     specialNurse.map((item) => {
       if (item.Id == params.query.id) {
         setUser(item)
         setAge(calculateAge(item.Birthday))
-      }
-    })
+      }})
   }, [])
   function calculateAge(birthdate) {           //calculate the age... 
     const now = new Date();
@@ -55,7 +56,7 @@ function Id() {
                 className="text-xl 2xl:text-3xl xl:font-bold bg-white text-main py-2 w-fit px-3 rounded-3xl" >
                 <span className="mr-1 flex items-center">Contact on Whatsapp <BsWhatsapp className='mx-2' /></span>
               </Link>
-              <Link href={``}
+              <Link href='../order' onClick={()=> {setUserId(user.Id);}}
                 className="text-xl 2xl:text-3xl font-normal bg-white text-main py-2 w-fit px-3 rounded-3xl" >
                 <span className="mr-1 flex items-center">Order Me <BsFillCartCheckFill className='mx-2' /></span>
               </Link>
