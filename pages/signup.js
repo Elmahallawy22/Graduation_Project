@@ -1,13 +1,18 @@
 import Head from 'next/head';
+import Link from 'next/link';
+import { useContext } from 'react';
+import { StateContext } from '../Components/Layout';
 import { useEffect } from 'react';
 import { useState } from "react";
-import {AiFillEye , AiFillEyeInvisible} from 'react-icons/ai';
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
-const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+const USER_REGEX = /^[a-zA-Z\s]{5,}$/;    //reg for name which contain space and charachters
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function Login() {
-  const [chooseUser, setChooseUser] = useState(true)
+  const {asNurse , setAsNurse}  = useContext(StateContext)
+  const [chooseUser, setChooseUser] = useState(false)
   const [typeUser, setTypeUser] = useState()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -17,11 +22,21 @@ export default function Login() {
   const [isConPasswordVisible, setIsConPasswordVisible] = useState(false)
   const [isnameFocus, setIsnameFocus] = useState(false);
   const [validName, setValidName] = useState(false);
+  const [ismailFocus, setIsmailFocus] = useState(false);
+  const [validMail, setValidMail] = useState(false);
+  const [ispassFocus, setIspassFocus] = useState(false);
+  const [validPass, setValidPass] = useState(false);
+  const [isconpassFocus, setIsconpassFocus] = useState(false);
 
   useEffect(() => {
     setValidName(USER_REGEX.test(name));
-}, [name])
-
+  }, [name]);
+  useEffect(() => {
+    setValidPass(PWD_REGEX.test(password));
+  }, [password])
+  useEffect(() => {
+    setValidMail(EMAIL_REGEX.test(email));
+  }, [email])
 
   return (
     <>
@@ -36,7 +51,6 @@ export default function Login() {
       {chooseUser === true ?
         <div className="flex login" >
           <div className="flex flex-col justify-evenly items-center w-full xl:w-2/4 bg-white">
-            {/* Sign Up page */}
             <div>
               <p className="text-5xl font-bold">
                 Care For You<span className="text-main">.</span>
@@ -50,92 +64,90 @@ export default function Login() {
                 handleSubmit(e)
               }}>
                 <div>
-                <input type="hidden" name="remember" value="true" />
-                <input
-                  id="user-name"
-                  name="name"
-                  type="text"
-                  value={name}
-                  autoComplete="name"
-                  required
-                  className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
-                  placeholder="Enter Your Name"
-                  onChange={(e) => { setName(e.target.value) }}
-                  onFocus={()=>setIsnameFocus(true)}
-                />
-                <p className={isnameFocus && !validName ? 'text-start text-red-600 text-md font-medium' :'hidden'}>You name Should from 4 to 24 characters. </p>
-                </div>
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  value={email}
-                  autoComplete="email"
-                  required
-                  className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
-                  placeholder="Email address"
-                  onChange={(e) => { setEmail(e.target.value) }}
-                />
-                <div className='flex relative'>
-                <input
-                  id="password"
-                  name="password"
-                  type={isPasswordVisible ? 'text' : 'password'}
-                  value={password}
-                  autoComplete="current-password"
-                  required
-                  className=" w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
-                  placeholder="Password"
-                  onChange={(e) => { setPassword(e.target.value) }}
+                  <input id="user-name"
+                    name="name"
+                    type="text"
+                    value={name}
+                    autoComplete="name"
+                    required
+                    className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
+                    placeholder="Enter Your Name"
+                    onChange={(e) => { setName(e.target.value) }}
+                    onFocus={() => setIsnameFocus(true)}
                   />
-                {
-                  isPasswordVisible ?
-                  <div className='absolute right-5 top-5' onClick={()=>setIsPasswordVisible(false)}>
-                  <AiFillEyeInvisible  className='text-3xl'/> 
-                  </div>
-                  :
-                  <div className='absolute right-5 top-5' onClick={()=>setIsPasswordVisible(true)}>
-                  <AiFillEye className='text-3xl'/> 
-                  </div> 
-                }
+                  <p className={isnameFocus && !validName ? 'text-start text-red-600 text-md font-medium' : 'hidden'}>You name Should from 4 to 24 characters. </p>
                 </div>
-                <div className='flex relative'>
-                <input
-                  id="confirmPassword"
-                  name="password"
-                  type={isConPasswordVisible ? 'text' : 'password'}
-                  value={conPassword}
-                  autoComplete="current-password"
-                  required
-                  className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
-                  placeholder="Confirm a Password"
-                  onChange={(e) => { setConPassword(e.target.value) }}
-                />
-                { isConPasswordVisible ?
-                  <div className='absolute right-5 top-5' onClick={()=>setIsConPasswordVisible(false)}>
-                  <AiFillEyeInvisible  className='text-3xl'/> 
-                  </div>
-                  :
-                  <div className='absolute right-5 top-5' onClick={()=>setIsConPasswordVisible(true)}>
-                  <AiFillEye className='text-3xl'/> 
-                  </div> 
-                }
+                <div>
+                  <input id="email-address"
+                    name="email"
+                    type="email"
+                    value={email}
+                    autoComplete="email"
+                    required
+                    className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
+                    placeholder="Email address"
+                    onChange={(e) => { setEmail(e.target.value) }}
+                    onFocus={() => setIsmailFocus(true)}
+                  />
+                  <p className={ismailFocus && !validMail ? 'text-start text-red-600 text-md font-medium' : 'hidden'}>You email should email </p>
+                </div >
+                <div className='relative'>
+                  <input id="password"
+                    name="password"
+                    type={isPasswordVisible ? 'text' : 'password'}
+                    value={password}
+                    autoComplete="current-password"
+                    required
+                    className=" w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
+                    placeholder="Password"
+                    onChange={(e) => { setPassword(e.target.value) }}
+                    onFocus={() => setIspassFocus(true)}
+                  />
+                  <p className={ispassFocus && !validPass ? 'text-start text-red-600 text-md font-medium' : 'hidden'}>You password Should be up 8 characters. </p>
+                  {isPasswordVisible ?
+                    <div className='absolute right-5 top-5' onClick={() => setIsPasswordVisible(false)}>
+                      <AiFillEyeInvisible className='text-3xl' />
+                    </div>
+                    :
+                    <div className='absolute right-5 top-5' onClick={() => setIsPasswordVisible(true)}>
+                      <AiFillEye className='text-3xl' />
+                    </div>
+                  }
                 </div>
-                <button
-                  type="submit"
+                <div className='relative'>
+                  <input id="confirmPassword"
+                    name="password"
+                    type={isConPasswordVisible ? 'text' : 'password'}
+                    value={conPassword}
+                    autoComplete="current-password"
+                    required
+                    className="w-full my-3 rounded-md border border-gray-300 px-3 py-2 focus:border-main focus:outline-none focus:ring-main sm:text-lg"
+                    placeholder="Confirm a Password"
+                    onChange={(e) => { setConPassword(e.target.value) }}
+                    onFocus={() => setIsconpassFocus(true)}
+                  />
+                  <p className={conPassword !== password && isconpassFocus ? 'text-start text-red-600 text-md font-medium' : 'hidden'}>You Confirm Password Should be equal Password </p>
+                  {isConPasswordVisible ?
+                    <div className='absolute right-5 top-5' onClick={() => setIsConPasswordVisible(false)}>
+                      <AiFillEyeInvisible className='text-3xl' />
+                    </div>
+                    :
+                    <div className='absolute right-5 top-5' onClick={() => setIsConPasswordVisible(true)}>
+                      <AiFillEye className='text-3xl' />
+                    </div>
+                  }
+                </div>
+                <Link href='/userdetails' type="submit"
                   className="w-full my-3 rounded-md bg-main py-2 text-xl font-medium text-white "
-                >
-                  Sign Up
-                </button>
+                > Sign Up
+                </Link>
               </form>
               <p className="text-center text-gray-600 mt-4">
                 Do you have an account?{" "}
-                <a
-                  href="login"
+                <Link href="login"
                   className="text-gray-800 font-semibold underline cursor-pointer"
-                >
-                  Sign In
-                </a>
+                > Sign In
+                </Link>
               </p>
             </div>
           </div>
@@ -147,11 +159,11 @@ export default function Login() {
             <h1 className="text-center text-3xl text-white font-semibold">Choose Your Type Of Users ?!</h1>
             <div className="flex justify-around mt-12">
               <button className="bg-white text-main text-3xl font-bold rounded-full py-1 px-5"
-                onClick={() => { setChooseUser(true); setTypeUser('Nusre') }}>
+                onClick={() => { setChooseUser(true); setTypeUser('Nusre'); setAsNurse(true) }}>
                 Nurse
               </button>
               <button className="bg-white text-main text-3xl font-bold rounded-full py-1 px-5"
-                onClick={() => { setChooseUser(true); setTypeUser('Pataint') }}>
+                onClick={() => { setChooseUser(true); setTypeUser('Pataint'); setAsNurse(false) }}>
                 Patient
               </button>
             </div>
@@ -161,34 +173,3 @@ export default function Login() {
     </>
   );
 }
-
-  // async function handleSubmit(e) {
-                  //   e.preventDefault();
-                  //   console.log(email);
-                  //   console.log(password);
-                  //   console.log(name);
-                  //   try {
-                  //     const response = await axios.post("https://care-for-you-v1.000webhostapp.com/api/auth/register",
-                  //       {
-                  //         email: email,
-                  //         password: password,
-                  //         name: name
-                  //       },
-                  //       {
-                  //         headers: { 'Content-Type': 'application/json' },
-                  //         withCredentials: true
-                  //       }
-                  //     );
-                  //     console.log(response?.data);
-                  //     console.log(response?.accessToken);
-                  //     console.log(JSON.stringify(response))
-                  //   } catch (err) {
-                  //     if (!err?.response) {
-                  //       console.log('No Server Response');
-                  //     } else if (err.response?.status === 409) {
-                  //       console.log('Username Taken');
-                  //     } else {
-                  //       console.log('Registration Failed')
-                  //     }
-                  //   }
-  // }

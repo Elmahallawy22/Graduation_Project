@@ -1,27 +1,28 @@
 import { useContext, useState } from "react";
 import { StateContext } from '../Layout';
 import { MdAddLocationAlt, MdKeyboardArrowDown } from 'react-icons/md'
-import useGeoLocation from "./useGeoLocation";
+import useGeoLocation from "../userdetails/useGeoLocation";
 import Link from "next/link";
 
-function FormForEnterData() {
+function FormForMyService() {
   const { loginTrue, setLoginTrue, asNurse, setAsNurse } = useContext(StateContext);
   const location = useGeoLocation();
-  const [fullName, setFullname] = useState('');
-  const [gender, setGender] = useState('Choose Your Gander');
-  const [userLocation, setUserLocation] = useState('');
+  const [fullName, setFullname] = useState('Youssef Mohamed Ali Elmahallawy');
+  const [gender, setGender] = useState('Male');
+  const [userLocation, setUserLocation] = useState('Mansoura');
   const [gen, setGen] = useState('');
-  const [birthday, setBirthday] = useState('');
-  const [userDescription, setUserDescription] = useState('');
-  const [education, setEducation] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [secondPhonNumber, setSecondPhonNumber] = useState('');
-  const [pediaticPrice, setPediaticPrice] = useState('')
-  const [eaderlyPrice, setEaderlyPrice] = useState('')
-  const [specialPrice, setSpecialPrice] = useState('')
-  const [emergencyPrice, setEmergencyPrice] = useState('')
-  const [womanPrice, setWomanPrice] = useState('')
-  const [soulPrice, setSoulPrice] = useState('')
+  const [birthday, setBirthday] = useState('11/11/2000');
+  const [userDescription, setUserDescription] = useState("As a nurse, I understand that each patient has unique care needs that require special attention and personalized care.That's why I offer specialized nursing care services to help patients achieve optimal wellness and recovery. My special nursing care services include a range of services tailored to meet the unique needs of each patient.These services may include wound care, medication management, pain management, and patient education.");
+  const [education, setEducation] = useState('Mansoura University Faculty of Nursing');
+  const [phoneNumber, setPhoneNumber] = useState('01067271096');
+  const [secondPhonNumber, setSecondPhonNumber] = useState('01558044849');
+  const [pediaticPrice, setPediaticPrice] = useState('12')
+  const [eaderlyPrice, setEaderlyPrice] = useState('15')
+  const [specialPrice, setSpecialPrice] = useState('00')
+  const [emergencyPrice, setEmergencyPrice] = useState('5')
+  const [womanPrice, setWomanPrice] = useState('7')
+  const [soulPrice, setSoulPrice] = useState('16')
+
   const priceStyle = "border-2 border-gray-500 w-full text-xl p-1 md:text-2xl md:p-2 rounded-lg flex justify-between lg:pr-36"
   const priceInsideStyle = " ml-2 pl-1 md:ml-12 md:pl-2 border-l-2 border-gray-400"
   const divToHalf = "flex space-y-6 lg:space-y-0 lg:space-x-4 flex-col lg:flex-row"
@@ -110,7 +111,7 @@ function FormForEnterData() {
         </div>
         <div className={`${divHalf} flex justify-between`}>
           <span>Your Birthday: </span>
-          <input type="date" onChange={(e) => setBirthday(e.target.value)} className={`${birthday === '' ? 'text-gray-400' : ''}`} />
+          <input type="text" onChange={(e) => setBirthday(e.target.value)} value={birthday} className={`${birthday === '' ? 'text-gray-400' : ''}`} />
         </div>
       </div>
       {asNurse &&
@@ -165,10 +166,9 @@ function FormForEnterData() {
           </div>
         </>}
       <div className="flex justify-end pr-5">
-        <Link type="submit" href='/' className="bg-main text-white text-2xl font-semibold px-3 md:px-6 py-2 rounded-lg text-end"
-          onClick={() => { setLoginTrue(true) }}>Save Data</Link>
+        <Link type="submit" href='/' className="bg-main text-white text-2xl font-semibold px-3 md:px-6 py-2 rounded-lg text-end">Save Data</Link>
       </div>
     </form>
   )
 }
-export default FormForEnterData;
+export default FormForMyService;

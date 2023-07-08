@@ -80,6 +80,9 @@ button {
 .text-gold {
   color: var(--gold-color);
 }
+.border-main{
+  border-color: #026670;
+}
 
 /* ------------------------------- home ------------------------------ */
 .land {

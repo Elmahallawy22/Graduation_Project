@@ -4961,7 +4961,7 @@ export const specialNurse = [
     Gender: "Male",
     Service: "Special",
     Description: "As a nurse, I understand that each patient has unique care needs that require special attention and personalized care.That's why I offer specialized nursing care services to help patients achieve optimal wellness and recovery. My special nursing care services include a range of services tailored to meet the unique needs of each patient.These services may include wound care, medication management, pain management, and patient education.", Price: 15,
-    Education: "Mansoura University Faculty of Nursing",
+    Education: "  ",
     Phone: "+201067271096",
     SecondPhone: "+201558044849",
     Birthday: "2/6/2000",

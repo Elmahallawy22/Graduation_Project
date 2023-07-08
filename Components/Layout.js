@@ -18,6 +18,8 @@ export function Layout(props) {
   const [path, setPath] = useState(true);
   const [activeMenu, setActiveMenu] = useState(false);
   const [userId ,  setUserId] = useState(0);
+  const [loginTrue , setLoginTrue ] = useState(false)
+  const [asNurse , setAsNurse ] = useState(true)
 
   useEffect(() => {
     if (window.location.pathname === '/dashboard' || window.location.pathname === '/dashboard/order')
@@ -32,7 +34,7 @@ export function Layout(props) {
       <>
         {path ?
           <div className="website" style={{ display: 'one' }}>
-            <StateContext.Provider value={{ activePages, setActivePages, activeLogin, setActiveLogin , userId , setUserId}}>
+            <StateContext.Provider value={{ activePages, setActivePages, activeLogin, setActiveLogin , userId , setUserId , loginTrue , setLoginTrue , asNurse , setAsNurse}}>
               <Navbar />
               {props.children}
               <Tabbars />
