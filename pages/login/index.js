@@ -20,7 +20,7 @@ export default function Login() {
           </p>
         </div>
         <div className="w-full max-w-md text-center pb-24">
-          <h1 className="font-bold text-4xl">Sign In as a </h1>
+          <h1 className="font-bold text-4xl">Sign In</h1>
           <p className="text-gray-600 py-4">Nursing, Care, Help</p>
           <form className="pl-3 pr-3 space6" action="#" method="POST">
             <input type="hidden" name="remember" value="true" />

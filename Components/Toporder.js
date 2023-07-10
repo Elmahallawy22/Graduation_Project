@@ -10,9 +10,9 @@ import Card from './Card'
 function Toporder() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  const onAutoplayTimeLeft = ( time, progress) => {
+    // progressCircle.current.style.setProperty('--progress', 1 - progress);
+    // progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
     const users = [
       { id: 1, image: 'avatar.jpg', name: 'Youssef Elmahallawy', price: 65, rate: 4, location: 9500 , color: '#8BE78B'},
@@ -35,7 +35,7 @@ function Toporder() {
             slidesPerView={1}
             navigation={true}
             autoplay={{
-              delay: 2500,
+              delay: 2000,
               disableOnInteraction: false,
             }}
             breakpoints={{

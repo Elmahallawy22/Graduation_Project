@@ -12,7 +12,7 @@ function Patients() {
                 <title>Our Patients</title>
             </Head>
             <div className='py-3 lg:py-5 '>
-                <PageTitle category='Page' page='Nurses' />
+                <PageTitle category='Page' page='Patients' />
                 <div id='table' className={`flex ${activeMenu === false ? 'md:justify-center' : ''}`}>
                     <div>
                         <TableForPages type='patients' items={patients} one="Image" two="Nurse Name"

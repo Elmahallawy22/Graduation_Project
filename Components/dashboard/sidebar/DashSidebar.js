@@ -7,7 +7,7 @@ import { HiHome } from 'react-icons/hi';
 import { AiOutlineLineChart , AiOutlineAreaChart , AiOutlineBarChart , AiOutlinePieChart, AiFillPieChart  } from 'react-icons/ai';
 import { BiMessageSquareEdit } from 'react-icons/bi';
 import { FaMoneyBillWave  } from 'react-icons/fa';
-import { MdDashboardCustomize, MdOutlinePeople , MdColorLens} from 'react-icons/md';
+import { MdDashboardCustomize, MdOutlinePeople , MdColorLens, MdMedicalServices} from 'react-icons/md';
 import { SiPowerpages , SiApacheecharts} from 'react-icons/si';
 
 export function DashSideber() {
@@ -28,6 +28,7 @@ export function DashSideber() {
         <ItemOfMenu className='item' icon={<BsCartCheck />} name='Orders' link='/dashboard/order'/>
         <ItemOfMenu className='item' icon={<MdOutlinePeople />} name='Nurses' link='/dashboard/nurses'/>
         <ItemOfMenu className='item' icon={<BsFillPeopleFill />} name='Patients' link='/dashboard/patients'/>
+        <ItemOfMenu className='item' icon={<MdMedicalServices />} name='Services' link='/dashboard/services'/>
         
         <CategoryName icon={<BsFillMenuAppFill />} title='App' />
         <ItemOfMenu className='item'icon={<BsPinMapFill />} name='Map' link='/dashboard/map'/>
